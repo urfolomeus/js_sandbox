@@ -16,8 +16,7 @@ jQuery(document).ready(function() {
         },
         showSlideshow = function() {
           jQuery('.overlay').modal({
-            containerCss: containerDimensions,
-            overlayClose: true
+            containerCss: containerDimensions
           });
           e.preventDefault();
         };
@@ -32,4 +31,47 @@ jQuery(document).ready(function() {
       alert('screen too small!');
     }
   });
+
+  previous = function() {
+    currentPhoto = $('.current')[0];
+    photoStack = $('.stack img');
+    index = $(photoStack).index(currentPhoto);
+    if(index > 0) {
+      prevPhoto = $(photoStack)[index-1];
+      $(currentPhoto).removeClass('current');
+      $(prevPhoto).addClass('current');
+    }
+  };
+
+  next = function() {
+    currentPhoto = $('.current')[0];
+    photoStack = $('.stack img');
+    index = $(photoStack).index(currentPhoto);
+    if(index < $(photoStack).length-1) {
+      nextPhoto = $(photoStack)[index+1];
+      $(currentPhoto).removeClass('current');
+      $(nextPhoto).addClass('current');
+    }
+  };
+
+  first = function() {
+    currentPhoto = $('.current')[0];
+    firstPhoto = $('.stack img')[0];
+    $(currentPhoto).removeClass('current');
+    $(firstPhoto).addClass('current');
+  };
+
+  last = function() {
+    currentPhoto = $('.current')[0];
+    photoStack = $('.stack img');
+    length = $(photoStack).length;
+    lastPhoto = $(photoStack)[length-1];
+    $(currentPhoto).removeClass('current');
+    $(lastPhoto).addClass('current');
+  };
+
+  jQuery('img.first').click(first);
+  jQuery('img.prev').click(previous);
+  jQuery('img.next').click(next);
+  jQuery('img.last').click(last);
 });

@@ -15,29 +15,12 @@
 </head>
 <body>
   <h1>JavaScript Sandbox</h1>
-  <div id="first">
-    <p>This is a sandbox used for testing out JavaScript.</p>
-    <ul>
-      <li class="first a">Listing 1</li>
-      <li class="b">Listing 2</li>
-      <li class="a">Listing 3</li>
-      <li class="b">Listing 4</li>
-      <li class="a">Listing 5</li>
-      <li class="last b">Listing 6</li>
-    </ul>
-  </div>
-  <div class="second">
-    <form action="/do_eet.html" method="POST">
-      <input type="text" name="full_name" value="" />
-      <input type="text" name="email" value="" />
-      <input type="submit" name="submit" value="Go!" />
-    </form>
-  </div>
   <a id="modal-link" href="#">Show modal</a>
   <div class="overlay">
     <div id="slideshow">
       <div id="photos">
         <div class="stack">
+          <img class="current" src="images/winter_wonderland.jpg" />
           <img src="images/bungalow8.jpg" />
         </div>
         <div class="nav">
@@ -45,11 +28,11 @@
           <img class="next" src="images/next.jpg" />
         </div>
         <div class="subnav">
-          <img src="images/start_gray_sm.jpg" />
-          <img src="images/prev_gray_sm.jpg" />
-          1 of 27
-          <img src="images/next_sm.jpg" />
-          <img src="images/end_sm.jpg" />
+          <img class="first" src="images/start_gray_sm.jpg" />
+          <img class="prev" src="images/prev_gray_sm.jpg" />
+          <span class="photo-count">1 of 27</span>
+          <img class="next" src="images/next_sm.jpg" />
+          <img class="last" src="images/end_sm.jpg" />
         </div>
         <div class="info">
           <h3>ASW's First Amsterdam Soiree at Bungalow 8</h3>
