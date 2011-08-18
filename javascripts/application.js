@@ -40,6 +40,7 @@ jQuery(document).ready(function() {
       prevPhoto = $(photoStack)[index-1];
       $(currentPhoto).removeClass('current');
       $(prevPhoto).addClass('current');
+      updatePager();
     }
   };
 
@@ -51,6 +52,7 @@ jQuery(document).ready(function() {
       nextPhoto = $(photoStack)[index+1];
       $(currentPhoto).removeClass('current');
       $(nextPhoto).addClass('current');
+      updatePager();
     }
   };
 
@@ -59,6 +61,7 @@ jQuery(document).ready(function() {
     firstPhoto = $('.stack img')[0];
     $(currentPhoto).removeClass('current');
     $(firstPhoto).addClass('current');
+    updatePager();
   };
 
   last = function() {
@@ -68,10 +71,27 @@ jQuery(document).ready(function() {
     lastPhoto = $(photoStack)[length-1];
     $(currentPhoto).removeClass('current');
     $(lastPhoto).addClass('current');
+    updatePager();
+  };
+
+  updatePager = function() {
+    currentPhoto = $('.current')[0];
+    photoStack = $('.stack img');
+    currentPhotoNum = $(photoStack).index(currentPhoto) + 1;
+    length = $(photoStack).length;
+    $('.photo-count').text(currentPhotoNum + " of " + length);
   };
 
   jQuery('img.first').click(first);
   jQuery('img.prev').click(previous);
   jQuery('img.next').click(next);
   jQuery('img.last').click(last);
+  jQuery('.stack img').mouseover(function() {
+    $('.nav .prev').show();
+    $('.nav .next').show();
+  });
+  jQuery('.stack img').mouseout(function() {
+    $('.nav .prev').hide();
+    $('.nav .next').hide();
+  });
 });

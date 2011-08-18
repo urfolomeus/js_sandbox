@@ -4,8 +4,8 @@ body { font-family: "helvetica neue"; font-size: 13pt; }
 /* General */
 #slideshow{ overflow: hidden; background-color: #eee; }
 #photos { overflow: hidden; padding: 5px; background-color: #fff }
-#slideshow.normal #photos .stack img { display: none; }
-#slideshow.normal #photos .stack img.current { display: block; }
+#slideshow #photos .stack img { display: none; }
+#slideshow #photos .stack img.current { display: block; }
 #photos .info h3 {
   color:#6082a0;
   font-size:0.8em;
@@ -22,6 +22,7 @@ body { font-family: "helvetica neue"; font-size: 13pt; }
   color: #6082a0;
   text-decoration: none;
 }
+#photos .nav img { display: none; }
 #photos .subnav {
   position: absolute;
   right: 9px;
@@ -30,7 +31,8 @@ body { font-family: "helvetica neue"; font-size: 13pt; }
   font-weight: bold;
 }
 #photos .subnav img {
-  padding-top: 0.2em;
+  vertical-align: middle;
+  margin-bottom: 4px;
 }
 .ad-banner {
   border-top: 1px solid #ccc;
