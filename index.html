@@ -15,36 +15,60 @@
 </head>
 <body>
   <h1>JavaScript Sandbox</h1>
-  <a id="modal-link" href="#">Show modal</a>
-  <div class="overlay">
-    <div id="slideshow">
-      <div id="photos">
-        <div class="stack">
-          <img class="current" src="images/winter_wonderland.jpg" />
-          <img src="images/bungalow8.jpg" />
+  <div id="slideshow-widget">
+    <div class="preview">
+      <img id = "pr_1" src="images/bungalow8_pr.jpg" />
+      <img id = "pr_2" src="images/winter_wonderland_pr.jpg" />
+      <img id = "pr_3" src="images/holiday_pr.jpg" />
+    </div>
+    <div class="overlay">
+      <div id="slideshow">
+        <div id="photos">
+          <div class="stack">
+            <div class="photo current">
+              <img id="1" src="images/bungalow8.jpg" />
+              <span class="caption">
+                Over 50 ASW members joined host CJ Von Banchet for a night of fun
+                and dancing at the world-famous nightclub Bungalow 8 in Amsterdam.
+              </span>
+            </div>
+            <div class="photo">
+              <img id="2" src="images/winter_wonderland.jpg" />
+              <span class="caption">
+                Hairy arses akimbo!
+              </span>
+            </div>
+            <div class="photo">
+              <img id="3" src="images/holiday.jpg" />
+              <span class="caption">
+                So we're just sitting there right drinking jugs of tequilla sunrise
+                when over the PA comes, "Hello Albufeira, rockin' to the sound of Aswad.
+                Fucking brilliant. :D
+              </span>
+            </div>
+          </div>
+          <div class="nav">
+            <img class="prev" src="images/previous.jpg" />
+            <img class="next" src="images/next.jpg" />
+          </div>
+          <div class="subnav">
+            <img class="first" src="images/start_gray_sm.jpg" />
+            <img class="prev" src="images/prev_gray_sm.jpg" />
+            <span class="photo-count">1 of 27</span>
+            <img class="next" src="images/next_sm.jpg" />
+            <img class="last" src="images/end_sm.jpg" />
+          </div>
+          <div class="info">
+            <h3>ASW's First Amsterdam Soiree at Bungalow 8</h3>
+            <p>
+              <span class="blurb"></span>
+              <a href="#">Read More &gt;</a>
+            </p>
+          </div>
         </div>
-        <div class="nav">
-          <img class="prev" src="images/previous.jpg" />
-          <img class="next" src="images/next.jpg" />
+        <div class="ad-banner">
+          <img src="images/ad_banner.jpg" />
         </div>
-        <div class="subnav">
-          <img class="first" src="images/start_gray_sm.jpg" />
-          <img class="prev" src="images/prev_gray_sm.jpg" />
-          <span class="photo-count">1 of 27</span>
-          <img class="next" src="images/next_sm.jpg" />
-          <img class="last" src="images/end_sm.jpg" />
-        </div>
-        <div class="info">
-          <h3>ASW's First Amsterdam Soiree at Bungalow 8</h3>
-          <p>
-            Over 50 ASW members joined host CJ Von Banchet for a night of fun
-            and dancing at the world-famous nightclub Bungalow 8 in Amsterdam.
-            <a href="#">Read More &gt;</a>
-          </p>
-        </div>
-      </div>
-      <div class="ad-banner">
-        <img src="images/ad_banner.jpg" />
       </div>
     </div>
   </div>

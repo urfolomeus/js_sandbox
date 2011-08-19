@@ -1,45 +1,46 @@
 body { font-family: "helvetica neue"; font-size: 13pt; }
-.overlay {display: none;}
-#overlay-close { position: absolute; top: -23px; right: -3px; }
-/* General */
-#slideshow{ overflow: hidden; background-color: #eee; }
-#photos { overflow: hidden; padding: 5px; background-color: #fff }
-#slideshow #photos .stack img { display: none; }
-#slideshow #photos .stack img.current { display: block; }
-#photos .info h3 {
+#slideshow-widget .overlay {display: none;}
+#slideshow-widget #overlay-close { position: absolute; top: -23px; right: -3px; }
+#slideshow-widget .overlay { display: none; }
+#slideshow { overflow: hidden; background-color: #eee; }
+#slideshow #photos .stack .photo span { display: none; }
+#slideshow #photos .stack .photo img { display: none; }
+#slideshow #photos .stack .photo.current img { display: block; }
+#slideshow #photos { overflow: hidden; padding: 5px; background-color: #fff }
+#slideshow #photos .info h3 {
   color:#6082a0;
   font-size:0.8em;
   font-weight:normal;
   margin: 0.4em 0;
 }
-#photos .info p {
+#slideshow #photos .info p {
   font-size: 0.7em;
   color: #666;
   margin-top: 0.4em;
   margin-bottom: 0.2em;
 }
-#photos .info a {
+#slideshow #photos .info a {
   color: #6082a0;
   text-decoration: none;
 }
-#photos .nav img { display: none; }
-#photos .subnav {
+#slideshow #photos .nav img { display: none; }
+#slideshow #photos .subnav {
   position: absolute;
   right: 9px;
   padding-top: 0.2em;
   font-size: 0.7em;
   font-weight: bold;
 }
-#photos .subnav img {
+#slideshow #photos .subnav img {
   vertical-align: middle;
   margin-bottom: 4px;
 }
-.ad-banner {
+#slideshow .ad-banner {
   border-top: 1px solid #ccc;
   padding-top: 5px;
   overflow: hidden;
 }
-.ad-banner img { display: block; margin: auto; }
+#slideshow .ad-banner img { display: block; margin: auto; }
 
 /* Dimensions - normal */
 #slideshow.normal { height: 634px; }
@@ -54,5 +55,5 @@ body { font-family: "helvetica neue"; font-size: 13pt; }
 #slideshow.mini #photos .stack img { width: 580px; height: 369px; }
 #slideshow.mini #photos .nav img.prev { position:absolute; top:172px; left:-10px; }
 #slideshow.mini #photos .nav img.next { position:absolute; top:172px; right:-10px; }
-.ad-banner img { width: 580px; height: 75px; }
+#slideshow .ad-banner img { width: 580px; height: 75px; }
 
