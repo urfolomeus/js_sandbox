@@ -1,0 +1,64 @@
+/* Styles the dialog box */
+.dialog {
+	position:relative;
+	padding:10px;
+	margin:0 0.2em 0.4em;
+	border:1px solid #ccc;
+	color:#333;
+	background:#fff;
+	/* css3 - ignored in IE < 9 */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+
+/* arrow-back: styles the arrow border (it's actually a larger, darker triangle in the background) */
+/* arrow-fore: styles the arrow fill (it's actually a smaller, lighter triangle in the foreground) */
+.dialog .arrow-back, .dialog .arrow-fore{
+	content:"";
+	position:absolute;
+	border-style:solid;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.dialog .arrow-back {
+	bottom:-7px; /* value = - border-top-width - border-bottom-width */
+  border-width:7px 7px 0;
+  border-color:#ccc transparent;
+}
+
+.dialog .arrow-fore {
+	bottom:-5px; /* value = - border-top-width - border-bottom-width */
+	border-width:5px 5px 0;
+	border-color:#fff transparent;
+}
+
+
+/* If the dialog box pops up under the anchor rather than over it, these styles will override */
+.dialog.underneath {
+  margin-top: 0.4em;
+}
+
+.dialog.underneath .arrow-back{
+  bottom: auto;
+	top: -7px; /* value = - border-top-width - border-bottom-width */
+  border-width: 0 7px 7px;
+}
+
+.dialog.underneath .arrow-fore {
+  bottom: auto;
+	top:-5px; /* value = - border-top-width - border-bottom-width */
+	border-width: 0 5px 5px;
+}
+
+
+/* Styles the drop shadow in all browsers other then IE < 9 */
+.shadow {
+	-moz-box-shadow: 1px 1px 2px #999;
+	-webkit-box-shadow: 1px 1px 3px #999;
+	box-shadow: 1px 1px 3px #999;
+  /* will be ignored in IE because the drop shadow is interfering with the bubble */
+}
+
